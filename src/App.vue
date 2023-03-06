@@ -24,11 +24,11 @@ const copy = ()=>{
   <main class="container text-center mt-5 ">
     <div class="row">
       <h1>Colors Generator</h1>
-      <button type="button" class="btn btn-success" @click="addNote">Act new Color</button>
+     
     </div>
 
 
-<div class="row ms-2">
+<div class="row ms-2 mt-3">
   <div  v-for="note in notes" :key="note.id"  class="col-2 card  mt-4 ms-2" style="min-width: 18rem;cursor: pointer;" :style="{backgroundColor:note.background}">
   <div class="card-body text-black ">
     <p class="card-text" @click="copy">{{ note.background}}</p>
@@ -36,6 +36,7 @@ const copy = ()=>{
  </div>
 
 </div>
+<button type="button" class="btn btn-success mt-3" @click="addNote" style="width: 100%;">Act new Color</button>
   </main>
 </template>
 
